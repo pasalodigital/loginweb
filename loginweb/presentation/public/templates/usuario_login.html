@@ -1,0 +1,19 @@
+{% block contenido %}
+
+<form role="form" method="post">
+    {% csrf_token %}
+    <label for="email">user</label>
+    <div>
+        {{ form.username }}
+        {{ form.errors.user }}
+    </div>
+    <br>
+    <label>Password</label>
+    <div>
+        {{ form.password }}
+        {{ form.errors.user }}
+    </div>
+    <button type="submit">Ingresar</button>
+</form>
+
+{% endblock %}

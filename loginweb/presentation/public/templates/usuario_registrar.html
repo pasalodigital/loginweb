@@ -1,0 +1,36 @@
+{% extends "base/templates/base.html" %}
+
+{% block contenido %}
+
+<form method="POST">
+    {% csrf_token %}
+    <div>
+      <label>Nombre</label>
+        {{ form.first_name }}
+        {{ form.errors.first_name }}
+    </div>
+    <div>
+      <label>Apellido</label>
+        {{ form.last_name }}
+        {{ form.errors.last_name }}
+    </div>
+    <div>
+      <label>Usuaio</label>
+        {{ form.username }}
+        {{ form.errors.username }}
+    </div>
+    <div>
+      <label>Email</label>
+        {{ form.email }}
+        {{ form.errors.email }}
+    </div>
+    <div>
+      <label>Password</label>
+        {{ form.password }}
+        {{ form.errors.password }}
+    </div>
+    <button type="submit">Registrar</button>
+</form>
+
+
+{% endblock %}
