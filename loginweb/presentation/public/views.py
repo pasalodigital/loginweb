@@ -42,6 +42,6 @@ class LoginView(View):
         if form.is_valid():
             user = authenticate(username=form.cleaned_data['username'], password=form.cleaned_data['password'])
             login(request, user)
-            return HttpResponse('correcto')
+            return HttpResponse('logueado')
         else:
             return TemplateResponse(request, 'usuario_login.html', {'form': form})
